@@ -22,4 +22,9 @@ pipeline {
       }
     }
   }
+  post {
+        always {
+            emailext attachLog: true, body: 'test body', subject: 'test email', to: 'udaykumar.j@avankia.com'
+        }
+    }
 }
